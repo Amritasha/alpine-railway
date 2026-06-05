@@ -1,0 +1,23 @@
+FROM alpine:3.19
+
+RUN apk add --no-cache \
+    bash curl wget git python3 py3-pip \
+    neofetch \
+    net-tools iproute2 iputils bind-tools \
+    vim nano htop tree unzip zip \
+    build-base gcc g++ make \
+    openssh-client \
+    jq less man-pages sudo lsof \
+    procps coreutils file ca-certificates
+
+RUN wget -qO /usr/local/bin/ttyd https://github.com/tsl0922/ttyd/releases/download/1.7.3/ttyd.x86_64 && \
+    chmod +x /usr/local/bin/ttyd
+
+RUN echo "neofetch" >> /root/.bashrc && \
+    echo "cd /root" >> /root/.bashrc
+
+EXPOSE $PORT
+
+CMD ["/bin/bash", "-c", "\
+    echo \"export PS1='\\[\\033[01;32m\\]$USERNAME@\\h\\[\\033[00m\\]:\\[\\033[01;34m\\]\\w\\[\\033[00m\\]\\$ '\" >> /root/.bashrc && \
+    /usr/local/bin/ttyd -p $PORT -c $USERNAME:$PASSWORD /bin/bash"]
