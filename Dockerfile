@@ -13,7 +13,7 @@ RUN apk add --no-cache \
     sqlite-dev readline-dev ncurses-dev \
     libxml2-dev libxslt-dev \
     postgresql-dev mariadb-dev \
-    libyaml-dev libpng-dev libjpeg-turbo-dev \
+    yaml-dev libpng-dev libjpeg-turbo-dev \
     musl-dev linux-headers
 
 RUN wget -qO /usr/local/bin/ttyd https://github.com/tsl0922/ttyd/releases/download/1.7.3/ttyd.x86_64 && \
