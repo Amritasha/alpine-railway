@@ -49,7 +49,7 @@ Hosting Alpine Terminal on Railway means spinning up a minimal Alpine Linux 3.19
 | Network | ip, ping, dig, openssh-client |
 | Data | jq |
 | General | sudo, python3, pip, git, curl, wget, neofetch |
-| Libraries | openssl-dev, zlib-dev, libffi-dev, sqlite-dev, readline-dev, ncurses-dev, libxml2-dev, libxslt-dev, postgresql-dev, mariadb-dev, libyaml-dev, libpng-dev, libjpeg-turbo-dev, linux-headers |
+| Libraries | openssl-dev, zlib-dev, libffi-dev, sqlite-dev, readline-dev, ncurses-dev, libxml2-dev, libxslt-dev, postgresql-dev, mariadb-dev, yaml-dev, libpng-dev, libjpeg-turbo-dev, linux-headers |
 
 ## Installing More Packages
 
