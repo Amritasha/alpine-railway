@@ -8,7 +8,13 @@ RUN apk add --no-cache \
     build-base gcc g++ make \
     openssh-client \
     jq less man-pages sudo lsof \
-    procps coreutils file ca-certificates
+    procps coreutils file ca-certificates \
+    openssl-dev zlib-dev libffi-dev \
+    sqlite-dev readline-dev ncurses-dev \
+    libxml2-dev libxslt-dev \
+    postgresql-dev mariadb-dev \
+    libyaml-dev libpng-dev libjpeg-turbo-dev \
+    musl-dev linux-headers
 
 RUN wget -qO /usr/local/bin/ttyd https://github.com/tsl0922/ttyd/releases/download/1.7.3/ttyd.x86_64 && \
     chmod +x /usr/local/bin/ttyd
